@@ -23,12 +23,6 @@ class MainActivity : AppCompatActivity() {
                 StrictMode.setThreadPolicy(policy)
             }
 
-            var testData = mapOf(
-                "username" to editText.text.toString(),
-                "password" to editText2.text.toString(),
-                "flag" to "1"
-            )
-
             val st = khttp.get("http://192.168.100.85:1337")
             textView.text = st.jsonObject.get("msg").toString()
             println(st.jsonObject.get("msg"))
