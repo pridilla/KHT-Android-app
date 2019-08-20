@@ -1,4 +1,4 @@
-package com.example.app
+package com.example.khtappka
 
 import android.annotation.SuppressLint
 import android.os.Bundle

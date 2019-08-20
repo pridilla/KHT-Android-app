@@ -1,4 +1,4 @@
-package com.example.app
+package com.example.khtappka
 
 import org.junit.Test
 

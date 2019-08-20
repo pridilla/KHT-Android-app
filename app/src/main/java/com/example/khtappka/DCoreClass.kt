@@ -1,4 +1,4 @@
-package com.example.app
+package com.example.khtappka
 
 import ch.decent.sdk.DCoreApi
 import ch.decent.sdk.DCoreSdk
