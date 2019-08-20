@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             var testData = mapOf(
-                "usernme" to editText.text.toString(),
+                "username" to editText.text.toString(),
                 "password" to editText2.text.toString(),
                 "flag" to "1"
             )
