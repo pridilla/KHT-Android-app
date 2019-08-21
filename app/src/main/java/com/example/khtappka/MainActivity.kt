@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 // https://github.com/jkcclemens/khttp/blob/master/LICENSE
-//testkljhjkklmjlk
 
 class MainActivity : AppCompatActivity() {
 

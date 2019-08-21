@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">KHTappka</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="activity_login_title">Log in"</string>
+    <string name="activity_login_user_text">"Enter your username"</string>
+    <string name="activity_login_pass">"Your password"</string>
+    <string name="activity_login_button_text">"LOG IN"</string>
+    <string name="activity_login_register_button_text">"REGISTER"</string>
+    <string name="activity_login_user_invalid">"This username does not exist!"</string>
+    <string name="activity_login_pass_invalid">"Password is invalid!"</string>
+
+    <string name="activity_register_title">"Create new account"</string>
+    <string name="activity_register_user_text">"Enter your new username"</string>
+    <string name="activity_register_pass1">"Enter your new password"</string>
+    <string name="activity_register_pass2">"And repeat the password"</string>
+    <string name="activity_register_email">"youremail@justtobe.sure"</string>
+    <string name="activity_register_button_text">"LET'S GO"</string>
+    <string name="activity_register_pass1_invalid">"This password is not secure!"</string>
+    <string name="activity_register_pass2_invalid">"Passwords do not match!"</string>
+    <string name="activity_register_email_invalid">"E-mail does not exist!"</string>
+
+    <string name="activity_dashboard_title">"Welcome to KHT!"</string>
+    <string name="activity_dashboard_logout">"LOG OUT"</string>
 </resources>
