@@ -9,6 +9,6 @@ class Constants {
         const val BC_HTTP_URL = "https://testnet.dcore.io/"
         const val BC_WEB_SOCKET_URL = "wss://testnet-socket.dcore.io/"
         const val ASSET_PRECISION = "2"
-        const val API_URL = ""
+        const val API_URL = "http://api.kosicehelptoken.sk"
     }
 }

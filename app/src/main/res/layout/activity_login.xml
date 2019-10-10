@@ -1,97 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/activity_login">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/activity_login_title_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/activity_login_title"
-            android:textSize="35sp"
-            app:layout_constraintBottom_toTopOf="@+id/activity_login_user_view"
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.684" />
+            app:layout_constraintTop_toBottomOf="@+id/Lreg"
+            app:srcCompat="@drawable/ic_kht_long" />
+
     <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/LuserText"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="161dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat_bold"
+            android:hint="username"
             android:inputType="textPersonName"
-            android:hint="@string/activity_login_user_text"
-            android:ems="10"
-            tools:layout_editor_absoluteY="210dp" android:id="@+id/activity_login_user_view"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" tools:ignore="MissingConstraints"
-            android:importantForAutofill="yes" />
+            android:textColor="#B4000000"
+            app:layout_constraintBottom_toTopOf="@+id/LpassText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-            android:id="@+id/activity_login_password_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:id="@+id/LpassText"
+            android:layout_width="222dp"
+            android:layout_height="0dp"
             android:ems="10"
-            android:hint="@string/activity_login_pass"
+            android:fontFamily="@font/montserrat_bold"
+            android:hint="password"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#B4000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/LmesText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_user_view"
-            app:layout_constraintVertical_bias="0.108"
-            android:importantForAutofill="yes" />
-
-    <Button
-            android:id="@+id/activity_login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="8dp"
-            android:background="#000000"
-            android:shadowColor="#FFFFFF"
-            android:text="@string/activity_login_button_text"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.511"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_password_view" />
-
-    <Button
-            android:id="@+id/activity_login_register_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="8dp"
-            android:background="#000000"
-            android:shadowColor="#FFFFFF"
-            android:text="@string/activity_login_register_button_text"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.511"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_button"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/LuserText" />
 
     <TextView
-            android:text=""
-            android:textColor="@android:color/holo_orange_dark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/activity_login_error_view" android:layout_marginTop="76dp"
-            app:layout_constraintTop_toBottomOf="@+id/activity_login_register_button"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+            android:id="@+id/LmesText"
+            android:layout_width="159dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="133dp"
+            android:text="message"
+            android:textAlignment="center"
+            android:textColor="#ea3716 "
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/Llog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LpassText" />
 
+    <TextView
+            android:id="@+id/Llog"
+            android:layout_width="215dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="login"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toTopOf="@+id/Lreg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LmesText" />
+
+    <TextView
+            android:id="@+id/Lreg"
+            android:layout_width="159dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="149dp"
+            android:fontFamily="@font/montserrat"
+            android:text="new to the kht?"
+            android:textAlignment="center"
+            android:textColor="#B4000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Llog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

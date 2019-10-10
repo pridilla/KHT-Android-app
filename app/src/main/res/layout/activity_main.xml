@@ -8,36 +8,13 @@
         android:screenOrientation="portrait"
         tools:context=".MainActivity">
 
-    <Button
-            android:text="REGISTER"
+    <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" android:layout_marginTop="84dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="80dp"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="username"
-            android:ems="10"
-            android:id="@+id/editText" android:layout_marginStart="80dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="64dp"
-            app:layout_constraintTop_toBottomOf="@+id/button2"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="password"
-            android:ems="10"
-            android:id="@+id/editText2" android:layout_marginStart="80dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="56dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="17dp"
-            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="156dp"
-            android:layout_marginTop="132dp" app:layout_constraintTop_toBottomOf="@+id/editText2"/>
-
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_kht_short" />
 </androidx.constraintlayout.widget.ConstraintLayout>

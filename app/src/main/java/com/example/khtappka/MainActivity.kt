@@ -2,8 +2,11 @@ package com.example.khtappka
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.StrictMode
+import android.view.Window
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n", "ObsoleteSdkInt")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
 
 
@@ -22,19 +28,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DashboardActivity::class.java))
         }
         else startActivity(Intent(this, LoginActivity::class.java))
-
-        button2.setOnClickListener {
-            if (android.os.Build.VERSION.SDK_INT > 9) {
-                val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-                StrictMode.setThreadPolicy(policy)
-            }
-
-            /*
-            val st = khttp.get("http://192.168.100.85:1337")
-            textView.text = st.jsonObject.get("msg").toString()
-            println(st.jsonObject.get("msg"))
-             */
-        }
     }
 }
 

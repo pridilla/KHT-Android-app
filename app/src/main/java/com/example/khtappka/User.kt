@@ -1,6 +1,8 @@
 package com.example.khtappka
 
+import android.util.Log
 import com.example.khtappka.Constants.Companion.API_URL
+import java.lang.Exception
 import java.util.Map
 
 class User (iusername: String, ipassword: String){
@@ -11,11 +13,17 @@ class User (iusername: String, ipassword: String){
     var flag: String? = null
     var email: String? = null
 
+    private lateinit var mRunnable:Runnable
+
     fun login() : Boolean {
-        val response = khttp.post(API_URL + "/login", mapOf("username" to username, "password" to password))
-        message = response.jsonObject.get("message") as String?
-        flag = response.jsonObject.get("flag") as String?
-        id = response.jsonObject.get("id") as String?
+        Log.d("KHT", "123")
+        mRunnable = Runnable {
+            val response = khttp.post(API_URL + "/login", mapOf("username" to username, "password" to password))
+            message = response.jsonObject.get("message") as String?
+            flag = response.jsonObject.get("flag") as String?
+            id = response.jsonObject.get("id") as String?
+            Log.d("KHT", message)
+        }
         if (message == "success") return true
         return false
     }
