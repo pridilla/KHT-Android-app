@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -15,12 +16,15 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_login)
+    }
+
+    override fun onResume() {
+        super.onResume()
         val userLocalStore = UserLocalStore(this)
         LmesText.text = ""
-
 
         this.Lreg.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
@@ -41,8 +45,8 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else {
-                loginUser.login()
-                LmesText.text = loginUser.message
+                Toast.makeText(this, loginUser.message, Toast.LENGTH_LONG).show()
+                //LmesText.text = loginUser.message
             }
         }
     }

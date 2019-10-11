@@ -1,12 +1,7 @@
 package com.example.khtappka
 
-import android.os.AsyncTask
-import android.os.Handler
 import android.util.Log
 import com.example.khtappka.Constants.Companion.API_URL
-import java.lang.Exception
-import java.util.Map
-import kotlin.concurrent.thread
 import android.os.StrictMode
 
 
@@ -37,6 +32,24 @@ class User (iusername: String, ipassword: String){
         message = response.jsonObject.get("message") as String
         flag = response.jsonObject.get("flag") as String
         id = response.jsonObject.get("id") as String
+        if (message == "success") return true
+        return false
+    }
+
+    fun getBalance(): String {
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+
+        val response = khttp.post(API_URL + "/balance", json = mapOf("username" to username))
+        return response.jsonObject.get("balance").toString()
+    }
+
+    fun transfer(amount : String, recipient: String): Boolean {
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+
+        val response = khttp.post(API_URL + "/transfer", json = mapOf("username" to username, "password" to password, "target_username" to recipient, "amount" to amount))
+        message = response.jsonObject.get("message").toString()
         if (message == "success") return true
         return false
     }

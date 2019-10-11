@@ -32,6 +32,10 @@
         </activity>
         <activity android:name=".RegisterActivity">
         </activity>
+        <activity android:name=".PayActivity">
+        </activity>
+        <activity android:name=".ConfPayActivity">
+        </activity>
 
         <meta-data
                 android:name="preloaded_fonts"
