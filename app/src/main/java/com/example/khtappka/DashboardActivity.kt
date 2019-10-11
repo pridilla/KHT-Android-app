@@ -29,6 +29,10 @@ class DashboardActivity : AppCompatActivity() {
         val user = userLocalStore.getLoggedInUser()
         this.dbalance.text = user.getBalance()
 
+        this.dpay.setOnClickListener {
+            startActivity(Intent(this, PayActivity::class.java))
+        }
+
         this.dlogout.setOnClickListener {
 
             userLocalStore.clearUserData()

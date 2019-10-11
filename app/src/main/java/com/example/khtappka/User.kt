@@ -47,8 +47,10 @@ class User (iusername: String, ipassword: String){
     fun transfer(amount : String, recipient: String): Boolean {
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
+        Log.d("KHT", amount)
+        Log.d("KHT", recipient)
 
-        val response = khttp.post(API_URL + "/transfer", json = mapOf("username" to username, "password" to password, "target_username" to recipient, "amount" to amount))
+        val response = khttp.post(API_URL + "/transfer", json = mapOf("username" to username, "target_username" to recipient, "amount" to amount))
         message = response.jsonObject.get("message").toString()
         if (message == "success") return true
         return false
